@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>    
+<head>
+    <title> Enter Your Name</title>
+    <p> Button colours will change</p>
+</head>
+<body>
+    <h2> Input Box</h2>
+    <input type ="text" id="myText">
+    <button id="btn" onclick="myFunction()"> Enter</button>
+    <script src="index.js"></script>
+    
+    <p id="demo"></p>
+    <script>
+        function myFunction(){
+            var x = document.getElementById("myText").value;
+            document.getElementById("demo").innerHTML = x;
+        }
+        
+            const btn = document.getElementById('btn')
+            let index=0;
+            const colors = ['Green', 'Red', 'Green', 'Red'];
+            btn.addEventListener('click', function onclick() {
+                btn.style.backgroundColor = colors[index];
+                btn.style.color = 'white';
+                index=index>=colors.length-1?0:index+1;
+            });
+            
+              
+    
+    </script>
+    
+    
+</body>
+</html>
